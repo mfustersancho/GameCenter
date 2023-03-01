@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".account.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            app:srcCompat="@drawable/planet_earth" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:shadowColor="@color/title_glow"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/screen_title_size" />
+
+        <ImageView
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            app:srcCompat="@drawable/planet_earth" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/tile_64"
+        android:shadowColor="@color/white"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:text="* Be careful. When the data is removed from the system it cannot be restored."
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="80dp"
+            android:background="#23F6F3F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:text="Delete all the scores"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_label" />
+
+            <Button
+                android:id="@+id/settings_button_delete_scores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_button_caption" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="80dp"
+            android:background="#23F6F3F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:text="Delete my account"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_label" />
+
+            <Button
+                android:id="@+id/settings_button_delete_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_button_caption" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

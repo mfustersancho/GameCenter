@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home_menu"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="Go to main menu" />
+    <item
+        android:id="@+id/menu_game_menu"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="Game selection" />
+    <item
+        android:id="@+id/menu_logoff"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="Logoff" />
+
+</menu>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:shadowColor="@color/blue"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="@string/game_center"
+        android:textAlignment="center"
+        android:textColor="@color/dark_purple"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <ImageView
+        android:id="@+id/circulo_rosa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/circulo_rosa"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+    <ImageView
+        android:id="@+id/circulo_azul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/circulo_azul"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <ImageView
+        android:id="@+id/circulo_violeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/circulo_violeta"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="284dp" />
+
+    <ImageView
+        android:id="@+id/circulo_amarillo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/circulo_amarillo"
+        tools:layout_editor_absoluteY="296dp" />
+</androidx.constraintlayout.motion.widget.MotionLayout>

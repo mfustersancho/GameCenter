@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Game Center</string>
+    <string name="game_center">Game Center</string>
+    <string name="main_menu">MAIN MENU</string>
+    <string name="game_menu">GAME MENU</string>
+    <string-array name="menu_items">
+        <item>Play Game</item>
+        <item>View Scores</item>
+        <item>Settings</item>
+        <item>About</item>
+    </string-array>
+    <string-array name="game_lightout">
+        <item>Lights Out</item>
+        <item>Apague todas las luces</item>
+        <item>drawable/ic_lightsout</item>
+        <item>com.example.gamecenter.game.lightsout.LightsOutActivity</item>
+    </string-array>
+    <string-array name="game_2048">
+        <item>2048</item>
+        <item>Consiga llegar a los 2048 puntos en el menor tiempo posible</item>
+        <item>drawable/ic_2048</item>
+        <item>com.example.gamecenter.game.game2048.g2048Activity</item>
+    </string-array>
+    <string name="bPrevious_text">PREVIOUS</string>
+    <string name="bReload_text">RELOAD</string>
+    <string name="bHint_text">HINT</string>
+    <string name="bNext_text">NEXT</string>
+    <string name="score_title">SCORE</string>
+    <string name="delete_button_caption">Delete</string>
+    <string name="game_time">Game time:</string>
+    <string name="about">ABOUT</string>
+</resources>

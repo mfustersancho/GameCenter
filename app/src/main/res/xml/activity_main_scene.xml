@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:duration="1500"
+        motion:autoTransition="animateToEnd" />
+
+    <Transition
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/titulo_aparicion"
+        motion:duration="1000"
+        motion:autoTransition="animateToEnd"/>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/titulo"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="396dp"
+            android:alpha="0" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_azul"
+            motion:transitionEasing="standard"
+            motion:pathMotionArc="startVertical"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toTopOf="@+id/titulo" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_violeta"
+            motion:transitionEasing="standard"
+            motion:pathMotionArc="startHorizontal"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            motion:layout_editor_absoluteY="-4dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_rosa"
+            motion:transitionEasing="standard"
+            motion:pathMotionArc="startVertical"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_amarillo"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:id="@+id/titulo"
+            android:layout_marginTop="396dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            android:alpha="0" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_azul"
+            motion:transitionEasing="standard"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="176dp"
+            android:layout_marginLeft="116dp"
+            android:layout_marginStart="116dp" />
+        <Constraint
+            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_rosa"
+            motion:transitionEasing="standard"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="252dp"
+            android:layout_marginLeft="212dp"
+            android:layout_marginStart="212dp" />
+        <Constraint
+            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_violeta"
+            motion:transitionEasing="standard"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="272dp"
+            android:layout_marginLeft="156dp"
+            android:layout_marginStart="156dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_amarillo"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="164dp"
+            android:layout_marginStart="204dp" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/titulo_aparicion" >
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/titulo"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="396dp" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/circulo_azul"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="176dp"
+            android:layout_marginStart="116dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_violeta"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="272dp"
+            android:layout_marginStart="156dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_rosa"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="252dp"
+            android:layout_marginStart="212dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/circulo_amarillo"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="164dp"
+            android:layout_marginStart="204dp" />
+    </ConstraintSet>
+
+</MotionScene>

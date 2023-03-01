@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".mainmenu.MainMenuActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_menu_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/main_menu_icon_left"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            app:srcCompat="@drawable/planet_earth" />
+
+        <TextView
+            android:id="@+id/main_menu_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/main_menu_icon_right"
+            android:layout_toEndOf="@id/main_menu_icon_left"
+            android:shadowColor="@color/title_glow"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:text="@string/main_menu"
+            android:textAlignment="center"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/screen_title_size" />
+
+        <ImageView
+            android:id="@+id/main_menu_icon_right"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/planet_earth" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/main_menu_list_view_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_menu_footer"
+        android:layout_below="@id/main_menu_header"
+        android:divider="@drawable/divider"
+        android:dividerHeight="5dp"
+        android:listSelector="@drawable/selector"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:id="@+id/main_menu_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/footer_height"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/earth" />
+
+</RelativeLayout>

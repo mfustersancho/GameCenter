@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/game_background"
+    android:orientation="vertical"
+    tools:context=".game.lightsout.LightsOutActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#D8B7B7"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:text="@string/game_time"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/tiempo_de_juego"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="00:00" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/layoutJoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layoutBotons"
+        android:layout_below="@+id/layoutTimer" />
+
+    <LinearLayout
+        android:id="@+id/layoutBotons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bPrevious_text" />
+
+        <Button
+            android:id="@+id/bReload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bReload_text" />
+
+        <Button
+            android:id="@+id/bHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bHint_text" />
+
+        <Button
+            android:id="@+id/bNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bNext_text" />
+    </LinearLayout>
+</RelativeLayout>

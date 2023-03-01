@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".scores.ScoreActivity">
+
+    <RelativeLayout
+        android:id="@+id/score_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/score_icon_left"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            app:srcCompat="@drawable/planet_earth" />
+
+        <TextView
+            android:id="@+id/score_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/score_icon_right"
+            android:layout_toEndOf="@id/score_icon_left"
+            android:shadowColor="@color/title_glow"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:text="@string/score_title"
+            android:textAlignment="center"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/screen_title_size" />
+
+        <ImageView
+            android:id="@+id/score_icon_right"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/planet_earth" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/score_game_selection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score_header"
+        android:background="@color/cyan"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Game selection:"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/score_spinner_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/score_recycler_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score_game_selection_layout"
+        android:layout_weight="2" />
+
+
+</RelativeLayout>
